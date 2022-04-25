@@ -1,0 +1,11 @@
+#list of all the files and folders you do not wish to push to github
+
+.vscode
+
+*.pdf 
+
+# all ending with .pdf
+
+designs
+
+.DS_store

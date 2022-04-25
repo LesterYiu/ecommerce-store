@@ -251,13 +251,13 @@ html {
 /* import Jakarta Sans font */
 @font-face {
   font-family: "Jakarta Sans";
-  src: url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff"), url("../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Regular.ttf"), url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff2");
+  src: url("../../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff"), url("../../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Regular.ttf"), url("../../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff2");
   font-weight: normal;
 }
 /* import Jakarta Sans font in bold */
 @font-face {
   font-family: "Jakarta Sans";
-  src: url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff"), url(../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff2), url(../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Bold.ttf);
+  src: url("../../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff"), url("../../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff2"), url("../../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Bold.ttf");
   font-weight: bold;
 }
 /* import Young Serif font */
@@ -468,4 +468,39 @@ a.button:focus {
   color: #fff;
   text-align: center;
   border-radius: 50%;
+}
+
+footer {
+  background-color: #084b6d;
+  color: #fff;
+  padding: 90px 0 50px 0;
+}
+footer .footerFlexContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+footer .footerFlexContainer h4 {
+  color: #fff;
+}
+footer .footerFlexContainer .footerNav {
+  width: 40%;
+}
+footer .footerFlexContainer .footerNav nav {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footerFlexContainer .footerNav nav ul {
+  width: 33%;
+}
+footer .footerFlexContainer .footerNav nav a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+footer .footerFlexContainer .footerNav nav a:hover {
+  color: white;
+}
+footer .footerFlexContainer .footerNav nav a:focus {
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

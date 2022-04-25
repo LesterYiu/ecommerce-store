@@ -526,4 +526,48 @@ header .headerContent {
 header .headerContent .contentContainer {
   margin: 0 auto;
   width: 65%;
+}
+
+.categoryGallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+}
+.categoryGallery .items {
+  padding: 45px;
+  margin: 50px 25px 25px;
+  border-radius: 10%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.categoryGallery .items img {
+  width: 100%;
+  border-radius: 10%;
+  margin: 0 auto 20px auto;
+}
+.categoryGallery .itemOne {
+  background-color: #ffd698;
+}
+.categoryGallery .itemTwo {
+  background-color: #f4fcff;
+}
+.categoryGallery .itemThree {
+  background-color: #f8fbf3;
+}
+.categoryGallery .itemFour {
+  background-color: #fff5f5;
+}
+.categoryGallery .items {
+  /* previous items CSS here */
+  transition: 0.2s ease;
+}
+.categoryGallery .items a:hover {
+  transform: scale(0.95);
+}
+.categoryGallery .items a:focus {
+  transform: scale(0.95);
 }/*# sourceMappingURL=styles.css.map */

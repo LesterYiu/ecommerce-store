@@ -8,17 +8,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-// Stated Variables should go first
-
-// COLOURS:
-// primary text (blue): #084b6d;
-// secondary (light blue): #f4fcff;
-// tertiary (green): #f8fbf3; 
-// quaternary (pink): #fff5f5; 
-// quinary (orange): #ffd698;
-// pastel blue: #d3f0f9 
-// white: #fff; 
-
 .skip-link {
     position: absolute;
     left: -1000px;
@@ -31,10 +20,3 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .skip-link:focus {
     left: 0;
 }
-
-// HEADINGS:
-// h1: 28px;
-// h2: 40px;
-// h3: 54px;
-// h4: 34px;
-// h5: 14px;

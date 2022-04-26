@@ -410,6 +410,9 @@ button.menuIcon:focus {
   background-color: transparent;
 }
 
+a {
+  display: inline-block;
+}
 a.button {
   color: #084b6d;
   background-color: transparent;
@@ -428,6 +431,11 @@ a.button:hover {
 a.button:focus {
   background-color: #084b6d;
   color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* _nav.scss */
@@ -572,6 +580,39 @@ header .headerContent .contentContainer {
   transform: scale(0.95);
 }
 
+.productsMainPage section {
+  padding: 75px;
+}
+.productsMainPage h2 {
+  text-align: center;
+}
+.productsMainPage .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.productsMainPage .products li {
+  flex-basis: calc(33.3333333333% - 30px);
+  margin: 5px 15px;
+  text-align: center;
+}
+.productsMainPage .products img {
+  border-radius: 10px;
+}
+.productsMainPage .popularProduct {
+  font-weight: bold;
+}
+.productsMainPage .discountedPrice {
+  text-decoration: line-through;
+  opacity: 0.8;
+  color: rgba(8, 75, 109, 0.5);
+}
+.productsMainPage .discountedPrice span {
+  text-decoration: none;
+  color: #084b6d;
+  display: inline-block;
+}
+
 @media (max-width: 975px) {
   header {
     padding: 40px 0;
@@ -583,7 +624,7 @@ header .headerContent .contentContainer {
     padding: 20px 0 50px 0;
   }
   header .headerImgContainer {
-    height: 100%;
+    height: 50vh;
     width: 90%;
     max-height: 400px;
   }

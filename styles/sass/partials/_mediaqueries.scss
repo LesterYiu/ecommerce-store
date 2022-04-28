@@ -70,4 +70,23 @@
             }
         }
     }
+    .navBar {
+        .wrapper {
+            flex-direction: column;
+            align-items: center;
+    
+            h1 {
+                margin-bottom: 1rem;
+            }
+    
+            .logo {
+                margin-left: 0;
+            }
+    
+            :first-child {
+                align-self: flex-start;
+            }
+        }
+    }
 }
+

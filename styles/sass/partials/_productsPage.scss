@@ -14,10 +14,10 @@
         justify-content:space-between;
 
         li {
-            // flex-basis: calc((100% /3) - 2%);
+            flex-basis: calc((100% /3) - 2%);
             // my personal way
-            flex-basis: calc((100% / 3) - 30px);
-            margin: 5px 15px;
+            // flex-basis: calc((100% / 3) - 30px);
+            // margin: 5px 15px;
             text-align: center;
         }
 
@@ -34,15 +34,16 @@
 
     .discountedPrice {
         text-decoration:line-through;
-        opacity: 0.8;
         color: rgba($color: $primary, $alpha: 0.5);
         span {
             text-decoration:none;
             color: rgba($color: $primary, $alpha: 1);
-            display:inline-block;
+            // display:inline-block;
             // display:inline-block allows it to set text decoration to be set back to default. inline (span is inline) does not allow certain properties to take affect, therefore by putting display:inline-block on the span, it will allow text-decoration:none to set affect
 
             //note: if we were to take the approach of using opacity for discounted price than using a different opacity on span, the opacity will add up. ex; .discountedprice with opacity 0.2 will add with span opacity of 0.5
         }
     }
+
+    // NOTE: with svg styling, we can use ::before or ::after to make it not mess up with the formatting of the page, it will not be read by screen readers either
 }

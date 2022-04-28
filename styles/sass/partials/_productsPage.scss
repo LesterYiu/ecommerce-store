@@ -47,3 +47,54 @@
 
     // NOTE: with svg styling, we can use ::before or ::after to make it not mess up with the formatting of the page, it will not be read by screen readers either
 }
+
+.guarantees {
+    background-color: $quaternary;
+    position: relative;
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 0.6rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: 0.5rem;
+        line-height: 1rem;
+    }
+
+    &::before {
+        content: "";
+        background-image: url(../assets/wave-3.svg);
+        background-color: $quaternary;
+
+        background-position: top center;
+        background-size: 1500px 60px;
+        background-repeat: repeat-x;
+        position: absolute;
+        height: 3rem;
+        left: 0;
+        right: 0;
+        top: -60px;
+        // svg has a certain number of waves, when a certain amount of space, it will crush it as much as possible within the background size.
+
+        // background-size allows it to spread it out more,  first number is width, 60 height;
+        // background repeat is doing nothing right now, but the width small enough or if it is zoomed down.
+        // height 3rem determines how tall the content of before is, therefore determining how tall the ::before section is
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            margin: 0 20px;
+            width: calc(25% - 40px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

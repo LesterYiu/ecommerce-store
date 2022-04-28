@@ -30,7 +30,8 @@ figure {
 }
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -143,7 +144,8 @@ fieldset {
 }
 
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -161,7 +163,8 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -213,11 +216,13 @@ template {
 }
 
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 .sr-only {
@@ -251,19 +256,19 @@ html {
 /* import Jakarta Sans font */
 @font-face {
   font-family: "Jakarta Sans";
-  src: url("../../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff"), url("../../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Regular.ttf"), url("../../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff2");
+  src: url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff"), url("../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Regular.ttf"), url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff2");
   font-weight: normal;
 }
 /* import Jakarta Sans font in bold */
 @font-face {
   font-family: "Jakarta Sans";
-  src: url("../../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff"), url("../../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff2"), url("../../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Bold.ttf");
+  src: url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff"), url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff2"), url("../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Bold.ttf");
   font-weight: bold;
 }
 /* import Young Serif font */
 @font-face {
   font-family: "Young Serif";
-  src: url("../../fonts/youngserif/YoungSerif-Regular.otf");
+  src: url("../fonts/youngserif/YoungSerif-Regular.otf");
 }
 /* _typography.scss */
 html {
@@ -345,6 +350,7 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -365,6 +371,7 @@ button {
   line-height: 1.2rem;
   text-align: center;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   /* style the button in the main nav menu to look just like an icon */
 }
@@ -422,6 +429,7 @@ a.button {
   font-weight: bold;
   line-height: 1.2rem;
   text-align: center;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 a.button:hover {
@@ -440,7 +448,6 @@ img {
 
 /* _nav.scss */
 .navBar {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -448,11 +455,17 @@ img {
   background-color: #fff;
 }
 .navBar .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px 0;
 }
 .navBar .searchCart {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .navBar .searchCart .searchIcon,
@@ -460,14 +473,20 @@ img {
   margin-right: 15px;
 }
 .navBar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .navBar .logo {
   margin-left: 60px;
 }
 .navBar .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .navBar .counter p {
   width: 24px;
@@ -484,8 +503,12 @@ footer {
   padding: 90px 0 50px 0;
 }
 footer .footerFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 90px;
 }
 footer .footerFlexContainer h4 {
@@ -495,8 +518,12 @@ footer .footerFlexContainer .footerNav {
   width: 40%;
 }
 footer .footerFlexContainer .footerNav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 footer .footerFlexContainer .footerNav nav ul {
   width: 33%;
@@ -516,9 +543,14 @@ footer .footerFlexContainer .footerNav nav a:focus {
 header {
   background-color: #f8fbf3;
   margin-bottom: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 header .headerImgContainer {
   width: 45%;
@@ -537,9 +569,14 @@ header .headerContent .contentContainer {
 }
 
 .categoryGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   text-align: center;
   width: 100%;
 }
@@ -548,9 +585,16 @@ header .headerContent .contentContainer {
   margin: 50px 25px 25px;
   border-radius: 10%;
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .categoryGallery .items img {
   width: 100%;
@@ -571,13 +615,16 @@ header .headerContent .contentContainer {
 }
 .categoryGallery .items {
   /* previous items CSS here */
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .categoryGallery .items a:hover {
-  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 .categoryGallery .items a:focus {
-  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .productsMainPage section {
@@ -587,12 +634,18 @@ header .headerContent .contentContainer {
   text-align: center;
 }
 .productsMainPage .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .productsMainPage .products li {
-  flex-basis: 31.3333333333%;
+  -ms-flex-preferred-size: 31.3333333333%;
+      flex-basis: 31.3333333333%;
   text-align: center;
 }
 .productsMainPage .products img {
@@ -610,6 +663,153 @@ header .headerContent .contentContainer {
   color: #084b6d;
 }
 
+.guarantees {
+  background-color: #fff5f5;
+  position: relative;
+}
+.guarantees h2 {
+  font-size: 1rem;
+}
+.guarantees h3 {
+  font-size: 0.6rem;
+  margin: 0;
+}
+.guarantees p {
+  font-size: 0.5rem;
+  line-height: 1rem;
+}
+.guarantees::before {
+  content: "";
+  background-image: url(../assets/wave-3.svg);
+  background-color: #fff5f5;
+  background-position: top center;
+  background-size: 1500px 60px;
+  background-repeat: repeat-x;
+  position: absolute;
+  height: 3rem;
+  left: 0;
+  right: 0;
+  top: -60px;
+}
+.guarantees ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.guarantees ul li {
+  margin: 0 20px;
+  width: calc(25% - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mapForm .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.mapForm .wrapper .mapContainer {
+  width: 50%;
+}
+.mapForm .wrapper iframe {
+  width: 100%;
+}
+.mapForm .wrapper .formContainer {
+  width: calc(50% - 70px);
+  margin-left: 70px;
+}
+.mapForm .wrapper .formContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mapForm .wrapper .formContainer form input,
+.mapForm .wrapper .formContainer form textarea {
+  padding: 0 0 10px 5px;
+  border: none;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: "Jakarta Sans";
+  border-bottom: 1px solid #eee;
+}
+.mapForm .wrapper .formContainer form input::-webkit-input-placeholder, .mapForm .wrapper .formContainer form textarea::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input::-moz-placeholder, .mapForm .wrapper .formContainer form textarea::-moz-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input:-ms-input-placeholder, .mapForm .wrapper .formContainer form textarea:-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input::-ms-input-placeholder, .mapForm .wrapper .formContainer form textarea::-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input::placeholder,
+.mapForm .wrapper .formContainer form textarea::placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input textarea,
+.mapForm .wrapper .formContainer form textarea textarea {
+  min-height: 130px;
+  border: 1px solid #eee;
+  border-top: none;
+}
+.mapForm .wrapper .formContainer form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+  color: #084b6d;
+  padding: 0 0 10px 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+  margin-bottom: 40px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  background-color: #fff;
+  background-image: url(../assets/caret-down-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 20px;
+}
+
 @media (max-width: 975px) {
   header {
     padding: 40px 0;
@@ -617,7 +817,10 @@ header .headerContent .contentContainer {
 }
 @media (max-width: 800px) {
   header {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 20px 0 50px 0;
   }
   header .headerImgContainer {
@@ -647,8 +850,13 @@ header .headerContent .contentContainer {
   }
 
   footer .footerFlexContainer {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer .footerFlexContainer .logo {
     margin-bottom: 20px;
@@ -660,8 +868,13 @@ header .headerContent .contentContainer {
 }
 @media (max-width: 580px) {
   .categories .categoryGallery {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .categories .categoryGallery .items {
     width: 60%;
@@ -669,8 +882,13 @@ header .headerContent .contentContainer {
   }
 
   .navBar .wrapper {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .navBar .wrapper h1 {
     margin-bottom: 1rem;
@@ -679,6 +897,7 @@ header .headerContent .contentContainer {
     margin-left: 0;
   }
   .navBar .wrapper :first-child {
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
